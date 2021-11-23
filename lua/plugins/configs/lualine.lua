@@ -6,6 +6,8 @@ end
 
 lualine.setup {
   options = {
-    theme = 'vscode'
+    theme = 'codedark',
+    section_separators = '',
+    component_separators = ''
   }
 }

@@ -53,7 +53,11 @@ return packer.startup(function()
     event = 'BufRead'
   }
 
-  use {
-    'norcalli/nvim-colorizer.lua'
-  }
+  use 'norcalli/nvim-colorizer.lua'
+
+  use 'windwp/nvim-autopairs'
+
+  use 'editorconfig/editorconfig-vim'
+
+  use 'akinsho/toggleterm.nvim'
 end)
