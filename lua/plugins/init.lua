@@ -13,6 +13,7 @@ return packer.startup(function()
   }
 
   use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
 
   use {
     'neoclide/coc.nvim',
@@ -21,7 +22,7 @@ return packer.startup(function()
 
   use {
     'nvim-treesitter/nvim-treesitter',
-    event = 'BufRead',
+    event = 'BufEnter',
     run = ':TSUpdate',
     config = function ()
       require('plugins.configs.treesitter')
@@ -89,6 +90,11 @@ return packer.startup(function()
     end
   }
 
+  use {
+    'windwp/nvim-ts-autotag',
+    after = 'nvim-treesitter'
+  }
+
   use 'editorconfig/editorconfig-vim'
 
   use {
@@ -104,6 +110,13 @@ return packer.startup(function()
       require('plugins.configs.telescope')
     end
   }
+
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'make'
+  }
+
+  use 'nvim-telescope/telescope-media-files.nvim'
 
   use {
     'terrortylor/nvim-comment',

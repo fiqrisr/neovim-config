@@ -41,7 +41,7 @@ opt.smartindent = true    -- autoindent new lines
 
 -- color scheme
 vim.g.vscode_style = 'dark'
-vim.cmd[[colorscheme onedark]]
+vim.cmd[[colorscheme vscode]]
 
 
 -- don't auto commenting new lines

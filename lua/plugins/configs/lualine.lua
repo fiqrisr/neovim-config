@@ -6,8 +6,12 @@ end
 
 lualine.setup {
   options = {
-    theme = 'onedark',
+    theme = 'codedark',
     section_separators = '',
-    component_separators = ''
+    component_separators = '',
+    disabled_filetypes = {
+      'toggleterm',
+      'NvimTree'
+    }
   }
 }

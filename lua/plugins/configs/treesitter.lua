@@ -5,33 +5,28 @@ if not present then
 end
 
 treesitter.setup {
-  defaults = {
-    initial_mode = 'insert',
-    selection_strategy = 'reset',
-    sorting_strategy = "ascending",
-    layout_strategy = "horizontal",
-    layout_config = {
-      horizontal = {
-        prompt_position = "top",
-        preview_width = 0.55,
-        results_width = 0.8,
-      },
-      vertical = {
-        mirror = false,
-      },
-      width = 0.87,
-      height = 0.80,
-      preview_cutoff = 120,
-    }
+  autotag = {
+    enable = true
   },
   context_commentstring = {
     enable = true
   },
   highlight = {
     enable = true,
-    use_languagetree = true
+    use_languagetree = true,
+    additional_vim_regex_highlighting = true,
   },
   indent = {
     enable = true
+  },
+  matchup = {
+    enable = true
   }
 }
+
+vim.cmd
+[[
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+set foldlevel=99
+]]
