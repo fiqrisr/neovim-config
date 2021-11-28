@@ -6,7 +6,7 @@ end
 
 lualine.setup {
   options = {
-    theme = 'codedark',
+    theme = 'onedark',
     section_separators = '',
     component_separators = ''
   }
