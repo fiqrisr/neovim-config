@@ -6,7 +6,7 @@ end
 
 lualine.setup {
   options = {
-    theme = 'codedark',
+    theme = 'gruvbox-flat',
     section_separators = '',
     component_separators = '',
     disabled_filetypes = {

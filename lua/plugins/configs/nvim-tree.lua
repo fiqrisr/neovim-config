@@ -60,7 +60,7 @@ nvimtree.setup {
   },
   git = {
     enable = true,
-    ignore = true
+    ignore = false
   },
   disable_netrw = true,
   hijack_netrw = true,

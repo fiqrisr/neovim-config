@@ -29,9 +29,21 @@ return packer.startup(function()
     end
   }
 
+  use {
+    'folke/trouble.nvim',
+    config = function ()
+      require('plugins.configs.trouble')
+    end
+  }
+
   -- color scheme
   use 'Mofiqul/vscode.nvim'
   use 'navarasu/onedark.nvim'
+  use {
+    'ellisonleao/gruvbox.nvim',
+    requires = { 'rktjmp/lush.nvim' }
+  }
+  use 'eddyekofo94/gruvbox-flat.nvim'
 
   use {
     'kyazdani42/nvim-web-devicons',
@@ -95,6 +107,8 @@ return packer.startup(function()
     after = 'nvim-treesitter'
   }
 
+  use 'andymass/vim-matchup'
+
   use 'editorconfig/editorconfig-vim'
 
   use {
@@ -122,6 +136,13 @@ return packer.startup(function()
     'terrortylor/nvim-comment',
     config = function ()
       require('nvim_comment').setup()
+    end
+  }
+
+  use {
+    'glepnir/dashboard-nvim',
+    config = function ()
+      require('plugins.configs.dashboard')
     end
   }
 end)
