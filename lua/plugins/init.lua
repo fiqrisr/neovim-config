@@ -36,22 +36,6 @@ return packer.startup(function()
     end
   }
 
-  -- color scheme
-  use 'Mofiqul/vscode.nvim'
-  use 'navarasu/onedark.nvim'
-  use {
-    'ellisonleao/gruvbox.nvim',
-    requires = { 'rktjmp/lush.nvim' }
-  }
-  use 'eddyekofo94/gruvbox-flat.nvim'
-
-  use {
-    'kyazdani42/nvim-web-devicons',
-    config = function ()
-      require('plugins.configs.icons')
-    end
-  }
-
   use {
     'nvim-lualine/lualine.nvim',
     config = function ()
@@ -63,6 +47,26 @@ return packer.startup(function()
     'akinsho/bufferline.nvim',
     config = function ()
       require('plugins.configs.bufferline')
+    end
+  }
+
+  -- color scheme
+  use 'Mofiqul/vscode.nvim'
+  use 'navarasu/onedark.nvim'
+  use {
+    'ellisonleao/gruvbox.nvim',
+    requires = { 'rktjmp/lush.nvim' }
+  }
+  use 'eddyekofo94/gruvbox-flat.nvim'
+  use {
+    'marko-cerovac/material.nvim',
+    config = [[ require('plugins.configs.material') ]]
+  }
+
+  use {
+    'kyazdani42/nvim-web-devicons',
+    config = function ()
+      require('plugins.configs.icons')
     end
   }
 
@@ -143,6 +147,13 @@ return packer.startup(function()
     'glepnir/dashboard-nvim',
     config = function ()
       require('plugins.configs.dashboard')
+    end
+  }
+
+  use {
+    'karb94/neoscroll.nvim',
+    config = function ()
+      require('plugins.configs.neoscroll')
     end
   }
 end)

@@ -38,3 +38,5 @@ map('n', '<leader>fo', ':Telescope oldfiles <CR>', default_opts)
 map("n", "<leader>/", ":CommentToggle<CR>", default_opts)
 map("v", "<leader>/", ":'<,'>CommentToggle<CR>", default_opts)
 
+-- material
+vim.api.nvim_set_keymap('n', '<leader>ms', ':lua require("material.functions").toggle_style()<CR>', { noremap = true, silent = true })

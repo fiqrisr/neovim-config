@@ -46,7 +46,7 @@
     "enumMember": "  "
   },
   "eslint.autoFixOnSave": true,
-  "prettier.eslintIntegration": true,
+  // "prettier.eslintIntegration": true,
   // "prettier.stylelintIntegration": true,
   "css.validate": false,
   "less.validate": false,

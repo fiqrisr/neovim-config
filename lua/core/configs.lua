@@ -4,6 +4,15 @@ local exec = vim.api.nvim_exec 	-- execute Vimscript
 local fn = vim.fn       				-- call Vim functions
 local g = vim.g         				-- global variables
 local opt = vim.opt         		-- global/buffer/windows-scoped options
+local o = vim.o
+
+-- color scheme
+-- vim.g.vscode_style = 'dark'
+-- vim.g.gruvbox_contrast_dark = 'hard'
+-- vim.g.gruvbox_flat_style = "dark"
+-- vim.cmd[[colorscheme gruvbox-flat]]
+g.material_style = 'darker'
+cmd 'colorscheme material'
 
 opt.mouse = 'a'               -- enable mouse support
 opt.clipboard = 'unnamedplus' -- copy/paste to system clipboard
@@ -17,10 +26,10 @@ opt.ignorecase = true         -- ignore case letters when search
 opt.smartcase = true          -- ignore lowercase for the whole pattern
 opt.linebreak = true          -- wrap on word boundary
 opt.cul = true
+o.updatetime = 300
 
 -- remove whitespace on save
 cmd [[au BufWritePre * :%s/\s\+$//e]]
-
 
 -- highlight on yank
 exec([[
@@ -39,13 +48,6 @@ opt.expandtab = true      -- use spaces instead of tabs
 opt.shiftwidth = 4        -- shift 4 spaces when tab
 opt.tabstop = 4           -- 1 tab == 4 spaces
 opt.smartindent = true    -- autoindent new lines
-
--- color scheme
--- vim.g.vscode_style = 'dark'
--- vim.g.gruvbox_contrast_dark = 'hard'
-vim.g.gruvbox_flat_style = "dark"
-vim.cmd[[colorscheme gruvbox-flat]]
-
 
 -- don't auto commenting new lines
 cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
