@@ -50,6 +50,18 @@ return packer.startup(function()
     end
   }
 
+  use {
+    'windwp/nvim-ts-autotag',
+    after = 'nvim-treesitter',
+    config = function ()
+      require('plugins.configs.autotag')
+    end
+  }
+
+  use {
+    'stevearc/dressing.nvim'
+  }
+
   -- color scheme
   use 'Mofiqul/vscode.nvim'
   use 'navarasu/onedark.nvim'
@@ -106,11 +118,6 @@ return packer.startup(function()
     end
   }
 
-  use {
-    'windwp/nvim-ts-autotag',
-    after = 'nvim-treesitter'
-  }
-
   use 'andymass/vim-matchup'
 
   use 'editorconfig/editorconfig-vim'
@@ -154,6 +161,13 @@ return packer.startup(function()
     'karb94/neoscroll.nvim',
     config = function ()
       require('plugins.configs.neoscroll')
+    end
+  }
+
+  use {
+    'Shatur/neovim-session-manager',
+    config = function ()
+      require('plugins.configs.session')
     end
   }
 end)
