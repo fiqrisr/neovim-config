@@ -50,6 +50,13 @@ return packer.startup(function()
     end
   }
 
+  -- use {
+  --   'romgrk/barbar.nvim',
+  --   config = function ()
+  --     require('plugins.configs.barbar')
+  --   end
+  -- }
+
   use {
     'windwp/nvim-ts-autotag',
     after = 'nvim-treesitter',
@@ -65,15 +72,19 @@ return packer.startup(function()
   -- color scheme
   use 'Mofiqul/vscode.nvim'
   use 'navarasu/onedark.nvim'
+
   use {
     'ellisonleao/gruvbox.nvim',
     requires = { 'rktjmp/lush.nvim' }
   }
   use 'eddyekofo94/gruvbox-flat.nvim'
+
   use {
     'marko-cerovac/material.nvim',
     config = [[ require('plugins.configs.material') ]]
   }
+
+  use 'folke/tokyonight.nvim'
 
   use {
     'kyazdani42/nvim-web-devicons',
@@ -165,8 +176,8 @@ return packer.startup(function()
   }
 
   use {
-    'Shatur/neovim-session-manager',
-    config = function ()
+    'rmagatti/auto-session',
+    config = function()
       require('plugins.configs.session')
     end
   }

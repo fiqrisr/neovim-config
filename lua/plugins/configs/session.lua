@@ -1,7 +1,9 @@
-local present, session = pcall(require, 'session-manager')
+local present, session = pcall(require, 'auto-session')
 
 if not present then
   return
 end
 
-session.setup()
+session.setup({
+  log_level = 'info',
+})

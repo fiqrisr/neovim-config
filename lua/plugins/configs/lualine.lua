@@ -6,12 +6,13 @@ end
 
 lualine.setup {
   options = {
-    theme = 'material-nvim',
+    theme = 'material',
     section_separators = '',
     component_separators = '',
     disabled_filetypes = {
       'toggleterm',
       'NvimTree'
     }
-  }
+  },
+  sections = {lualine_c = {require('auto-session-library').current_session_name}}
 }

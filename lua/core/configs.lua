@@ -6,6 +6,9 @@ local g = vim.g         				-- global variables
 local opt = vim.opt         		-- global/buffer/windows-scoped options
 local o = vim.o
 
+-- GUI font
+cmd [[set guifont=VictorMono\ Nerd\ Font:h10]]
+
 -- color scheme
 -- vim.g.vscode_style = 'dark'
 -- vim.g.gruvbox_contrast_dark = 'hard'
