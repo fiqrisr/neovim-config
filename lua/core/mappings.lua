@@ -18,6 +18,22 @@ map('n', '<C-n>', ':NvimTreeToggle <CR>', default_opts)       -- open/close
 map('n', '<leader>r', ':NvimTreeRefresh <CR>', default_opts)  -- refresh
 map('n', '<leader>n', ':NvimTreeFindFile <CR>', default_opts) -- search file
 
+-- COC
+map("n", "<leader>.", "<Plug>(coc-codeaction)", {})
+map("n", "<leader>l", ":CocCommand eslint.executeAutofix<CR>", {})
+map("n", "K", ":call CocActionAsync('doHover')<CR>", { silent = true, noremap = true })
+map('i', '<C-Space>', 'coc#refresh()', { noremap = false, silent = true, expr = true })
+map("i", "<TAB>", "pumvisible() ? '<C-n>' : '<TAB>'", { noremap = true, silent = true, expr = true })
+map("i", "<S-TAB>", "pumvisible() ? '<C-p>' : '<C-h>'", { noremap = true, expr = true })
+map("i", "<CR>", "pumvisible() ? coc#_select_confirm() : '<C-G>u<CR><C-R>=coc#on_enter()<CR>'", { noremap = true, silent = true, expr = true })
+map('n', '<leader>rn', '<Plug>(coc-rename)', { noremap = false, silent = true })
+map('n', '<leader>[g', '<Plug>(coc-diagnostic-prev)', { noremap = false, silent = true })
+map('n', '<leader>]g', '<Plug>(coc-diagnostic-next)', { noremap = false, silent = true })
+map('n', '<leader>gd', '<Plug>(coc-definition)', { noremap = false, silent = true })
+map('n', '<leader>gy', '<Plug>(coc-type-definition)', { noremap = false, silent = true })
+map('n', '<leader>gi', '<Plug>(coc-implementation)', { noremap = false, silent = true })
+map('n', '<leader>gr', '<Plug>(coc-references)', { noremap = false, silent = true })
+
 -- Bufferline
 map('n', '<S-l>', ':BufferLineCycleNext <CR>', default_opts)
 map('n', '<S-h>', ':BufferLineCyclePrev <CR>', default_opts)

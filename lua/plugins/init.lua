@@ -50,13 +50,6 @@ return packer.startup(function()
     end
   }
 
-  -- use {
-  --   'romgrk/barbar.nvim',
-  --   config = function ()
-  --     require('plugins.configs.barbar')
-  --   end
-  -- }
-
   use {
     'windwp/nvim-ts-autotag',
     after = 'nvim-treesitter',
@@ -68,6 +61,8 @@ return packer.startup(function()
   use {
     'stevearc/dressing.nvim'
   }
+
+  use 'liuchengxu/vista.vim'
 
   -- color scheme
   use 'Mofiqul/vscode.nvim'
@@ -157,7 +152,24 @@ return packer.startup(function()
   use {
     'terrortylor/nvim-comment',
     config = function ()
-      require('nvim_comment').setup()
+      require('nvim_comment').setup({
+        hook = function()
+          require("ts_context_commentstring.internal").update_commentstring()
+        end,
+      })
+    end
+  }
+
+  use {
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    after = 'nvim-treesitter',
+    config = function ()
+      require'nvim-treesitter.configs'.setup {
+        context_commentstring = {
+          enable = true,
+          enable_autocmd = false,
+        }
+      }
     end
   }
 

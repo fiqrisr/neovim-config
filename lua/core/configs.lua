@@ -9,6 +9,9 @@ local o = vim.o
 -- GUI font
 cmd [[set guifont=VictorMono\ Nerd\ Font:h10]]
 
+-- Neovide
+g.neovide_remember_window_size = true
+
 -- color scheme
 -- vim.g.vscode_style = 'dark'
 -- vim.g.gruvbox_contrast_dark = 'hard'
@@ -29,6 +32,8 @@ opt.ignorecase = true         -- ignore case letters when search
 opt.smartcase = true          -- ignore lowercase for the whole pattern
 opt.linebreak = true          -- wrap on word boundary
 opt.cul = true
+o.backup = false
+o.writebackup = false
 o.updatetime = 300
 
 -- remove whitespace on save
@@ -109,7 +114,7 @@ opt.shortmess:append "sI"
 
 -- Auto open nvim-tree when writing (nvim .) in command line
 -- and auto open Dashboard when nothing given as argument.
-vim.cmd
+cmd
 [[
 if index(argv(), ".") >= 0
   autocmd VimEnter * NvimTreeToggle
