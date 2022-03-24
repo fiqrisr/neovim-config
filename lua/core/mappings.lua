@@ -20,6 +20,8 @@ map('n', '<leader>n', ':NvimTreeFindFile <CR>', default_opts) -- search file
 
 -- COC
 map("n", "<leader>.", "<Plug>(coc-codeaction)", {})
+map("x", "<leader>a", "<Plug>(coc-codeaction-selected)", {})
+map("n", "<leader>a", "<Plug>(coc-codeaction-selected)", {})
 map("n", "<leader>l", ":CocCommand eslint.executeAutofix<CR>", {})
 map("n", "K", ":call CocActionAsync('doHover')<CR>", { silent = true, noremap = true })
 map('i', '<C-Space>', 'coc#refresh()', { noremap = false, silent = true, expr = true })
@@ -46,6 +48,7 @@ map('n', '<leader>fa', ':Telescope find_files hidden=true <CR>', default_opts)
 map('n', '<leader>fp', ':Telescope media_files <CR>', default_opts)
 map('n', '<leader>cm', ':Telescope git_commits <CR>', default_opts)
 map('n', '<leader>gt', ':Telescope git_status <CR>', default_opts)
+map('n', '<leader>gw', ':lua require("telescope").extensions.git_worktree.git_worktrees() <CR>', default_opts)
 map('n', '<leader>fh', ':Telescope help_tags <CR>', default_opts)
 map('n', '<leader>fw', ':Telescope live_grep <CR>', default_opts)
 map('n', '<leader>fo', ':Telescope oldfiles <CR>', default_opts)
