@@ -103,6 +103,13 @@ return packer.startup(function()
   }
 
   use {
+    'ThePrimeagen/git-worktree.nvim',
+    config = function ()
+      require('git-worktree')
+    end
+  }
+
+  use {
     'lukas-reineke/indent-blankline.nvim',
     event = 'BufRead',
     config = function ()
@@ -193,4 +200,10 @@ return packer.startup(function()
       require('plugins.configs.session')
     end
   }
+
+  use 'tpope/vim-surround'
+
+  use 'github/copilot.vim'
+
+  use 'andweeb/presence.nvim'
 end)
