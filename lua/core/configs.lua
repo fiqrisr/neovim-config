@@ -17,8 +17,10 @@ g.neovide_remember_window_size = true
 -- vim.g.gruvbox_contrast_dark = 'hard'
 -- vim.g.gruvbox_flat_style = "dark"
 -- vim.cmd[[colorscheme gruvbox-flat]]
-g.material_style = 'darker'
-cmd 'colorscheme material'
+-- g.material_style = 'darker'
+g.tokyonight_style = 'night'
+g.tokyonight_italic_functions = true
+cmd 'colorscheme tokyonight'
 
 opt.mouse = 'a'               -- enable mouse support
 opt.clipboard = 'unnamedplus' -- copy/paste to system clipboard
@@ -123,3 +125,4 @@ elseif len(argv()) == 0
   autocmd VimEnter * Dashboard
 endif
 ]]
+
