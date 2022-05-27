@@ -52,5 +52,17 @@
   "less.validate": false,
   "scss.validate": false,
   "wxss.validate": false,
-  "react-refactor.produceClass": false
+  "react-refactor.produceClass": false,
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+    }
+  }
 }
