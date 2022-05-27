@@ -6,7 +6,7 @@ end
 
 lualine.setup {
   options = {
-    theme = 'material',
+    theme = 'tokyonight',
     section_separators = '',
     component_separators = '',
     disabled_filetypes = {
@@ -14,5 +14,9 @@ lualine.setup {
       'NvimTree'
     }
   },
-  sections = {lualine_c = {require('auto-session-library').current_session_name}}
+  sections = {
+    lualine_c = {
+      require('auto-session-library').current_session_name,
+    }
+  }
 }

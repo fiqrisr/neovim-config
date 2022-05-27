@@ -30,6 +30,11 @@ return packer.startup(function()
   }
 
   use {
+    'p00f/nvim-ts-rainbow',
+    after = 'nvim-treesitter'
+  }
+
+  use {
     'folke/trouble.nvim',
     config = function ()
       require('plugins.configs.trouble')
@@ -64,22 +69,22 @@ return packer.startup(function()
 
   use 'liuchengxu/vista.vim'
 
+  use {
+    'petertriho/nvim-scrollbar',
+    config = function ()
+      require('plugins.configs.scrollbar')
+    end
+  }
+
   -- color scheme
   use 'Mofiqul/vscode.nvim'
   use 'navarasu/onedark.nvim'
-
-  use {
-    'ellisonleao/gruvbox.nvim',
-    requires = { 'rktjmp/lush.nvim' }
-  }
-  use 'eddyekofo94/gruvbox-flat.nvim'
+  use 'folke/tokyonight.nvim'
 
   use {
     'marko-cerovac/material.nvim',
     config = [[ require('plugins.configs.material') ]]
   }
-
-  use 'folke/tokyonight.nvim'
 
   use {
     'kyazdani42/nvim-web-devicons',
@@ -206,4 +211,11 @@ return packer.startup(function()
   use 'github/copilot.vim'
 
   use 'andweeb/presence.nvim'
+
+  -- PlantUML
+  use 'aklt/plantuml-syntax'
+  use 'tyru/open-browser.vim'
+  use 'weirongxu/plantuml-previewer.vim'
+
+  use 'wakatime/vim-wakatime'
 end)
